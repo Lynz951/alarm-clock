@@ -3,29 +3,37 @@
     <head>
         <meta charset="utf-8">
         <title>My Alarm Clock</title>
-        <link rel="stylesheet" href="styles.css">
-       
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1> My Alarm Clock</h1>
-        
-        <!--Put Alarm in html-->
+
+        <!-- Make container for Alarm -->
+
+        <section class="container">
         <div class="Alarm">
+        <h1> My Alarm Clock</h1>
 
             <!-- Display current time--> 
-            <div class="time">
-            <h1>00:00:00 PM</h1>
+
+            <div class="clock">
+        
             </div>
 
-            <!-- Place to input alarm time-->
-            <div class="set">
+            <!-- Place to input alarm time and keep on display-->
 
+            <div class="set">
+                <input onInput="setAlarmTime(this.value)" name="alarmtime" type="datetime-local">
             </div>
 
             <!-- Button to set or clear alarm-->
-            <button>Set Alarm</button>
+
+            <div class="controls">
+            <button class="button set-alarm">Set alarm</button>
+            <button class="button clear-alarm">Clear alarm</button>
+            </div>
         </div>
+        </section>
         <script src="myscripts.js" defer></script> 
     </body>
-   
 </html>

@@ -1,3 +1,26 @@
 
-body
-    
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: azure;
+}
+
+.container {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.set-alarm {
+    background-color: pink;
+}
+
+.clear-alarm {
+    background-color: lightslategray;
+}
