@@ -2,38 +2,35 @@
 <html lang="en-us">
     <head>
         <meta charset="utf-8">
-        <title>My Alarm Clock</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <title>My Alarm Clock</title>
     </head>
     <body>
 
         <!-- Make container for Alarm -->
 
         <section class="container">
-        <div class="Alarm">
-        <h1> My Alarm Clock</h1>
+        <h1>Lindsay's Alarm Clock</h1>
 
             <!-- Display current time--> 
 
-            <div class="clock">
-        
-            </div>
+            <div id="clock"></div>
 
             <!-- Place to input alarm time and keep on display-->
 
-            <div class="set">
+            <div id="set">
                 <input onInput="setAlarmTime(this.value)" name="alarmtime" type="datetime-local">
             </div>
 
             <!-- Button to set or clear alarm-->
 
-            <div class="controls">
-            <button class="button set-alarm">Set alarm</button>
-            <button class="button clear-alarm">Clear alarm</button>
+            <div id="controls">
+            <button onclick="setAlarm()" class="button set-alarm">Set alarm</button>
+            <button onclick="clearAlarm()" class="button clear-alarm">Clear alarm</button>
             </div>
         </div>
         </section>
-        <script src="myscripts.js" defer></script> 
+        <script src="main.js" defer></script> 
     </body>
 </html>

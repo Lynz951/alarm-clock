@@ -1,14 +1,18 @@
 
 body, html {
     margin: 0;
-    padding: 0;
+    padding: 20px;
     background-color: azure;
 }
 
 .container {
-    min-height: 500px;
+    min-height: 20px;
     display: flex;
     align-items: center;
+}
+
+#clock {
+    font-size: 200px;
 }
 
 .button {
