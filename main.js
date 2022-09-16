@@ -1,62 +1,29 @@
 /* set variables */
+
+const display = document.getElementById('clock');
 /*
-setAlarmBtn = document.querySelector("button");
-
-let date = new Date();
-console.log('Date: ', date);
-
-let futureDate= new Date('');
-console.log('Date: ', futureDate);
-
-let hour = date.getHours();
-let minutes = date.getMinutes(); */
+const audio = new Audio(assets/01 Back to the Sea.m4a);
+audio.loop = true;
+let alarmTime = null;
+let alarmtimout = null;*/
 
 /* display current time */
 
-const display = document.getElementbyId('clock');
-
 function updateTime() {
+    console.log('my update time function is running');
     const date = new Date();
 
     let hour = date.getHours();
     let minutes = date.getMinutes();
     let seconds = date.getSeconds();
 
-    display.innerText=`${hour} : ${minutes} : ${seconds}`
+    display.innerText=`${hour} : ${minutes} : ${seconds}`;
 }
+updateTime();
 
-function formatTime(time) {
-    if ( time < 10 ) {
-        return '0' + time;
-    }
-    return time;
-}
-
-
-/* set alarm time 
-
-function setAlarmTime(value) {
-    alarmTime = value;
-}
-*/
-
-/* if time equals alarm time, sound the alarm, if not, do nothing 
-
-function compareDates(one, two) {
-    if (
-        date.getHours() === futureDate.getHours() &&
-        date.getMinutes() === futureDate.getMinutes()
-    )
-}
-*/
-
+/* save alarm time 
+/* if there is an alarm time and time equals alarm time, sound the alarm, if not, do nothing */
 /* reset alarm when clear alarm button is pressed 
-
-function clearAlarm() {
-    Audio.pause();
-    if (alarmTimeout)
-}
-*/
 /* run function every second */
 
 setInterval(updateTime, 1000);
