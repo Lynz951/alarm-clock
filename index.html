@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>My Alarm Clock</title>
+    </head>
+    <body>
+
+        <!-- Make container for Alarm -->
+
+        <section class="container">
+        <h1>Lindsay's Alarm Clock</h1>
+
+            <!-- Display current time--> 
+            <h2>Current Time</h2>
+            <div id="current-time"></div>
+            <br>
+            <!-- Place to input alarm time and keep on display-->
+
+                <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local">
+
+            <!-- Buttons to set and clear alarm-->
+
+            
+            <button onclick="setAlarm()" class="button set-alarm">Set alarm</button>
+            <button onclick="clearAlarm()" class="button clear-alarm">Clear alarm</button>
+            
+        </div>
+        </section>
+        <script src="main.js"></script> 
+    </body>
+</html>
