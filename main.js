@@ -44,7 +44,7 @@ function setAlarm() {
         const current = new Date();
         const timeToAlarm = new Date(alarmTime);
 
-        if (timeToAlarm > current) {
+        if (timeToAlarm > current) { /*Only sets alarm if time is after current time */
             const timeout = timeToAlarm.getTime() - current.getTime();
             alarmTimeout = setTimeout(() => timeout);
             alert('Alarm set');
@@ -52,18 +52,31 @@ function setAlarm() {
     }
 }
 
-// function clearAlarm() {
-//     Audio.pause();
-//     if (alarmTimeout)
+/* if there is an alarm time and time equals alarm time, sound the alarm, if not, do nothing */
+
+// function compareDate = new Dates(one, two) {
+//     if (
+//         date.getHours() === futureDate.getHours() &&
+//         date.getMinutes() === futureDate.getMinutes();
+//         alert('Wake up');
+//     ) 
 // }
 
+/* reset alarm when clear alarm button is pressed */
 
+function clearAlarm() {
+    if (alarmTimeout) {
+        clearTimeout(alarmTimeout);
+        alert('Alarm cleared');
+}
+}
+
+/* run updateTime function every second */
 updateTime();
 setInterval(updateTime, 1000);
 
-/* if there is an alarm time and time equals alarm time, sound the alarm, if not, do nothing */
-/* reset alarm when clear alarm button is pressed 
-/* run function every second */
+
+
 
 
 
