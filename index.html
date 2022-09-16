@@ -15,20 +15,18 @@
 
             <!-- Display current time--> 
             <h2>Current Time</h2>
-            <div id="clock"></div>
+            <div id="current-time"></div>
             <br>
             <!-- Place to input alarm time and keep on display-->
 
-            <div id="set">
-                <input onInput="setAlarmTime(this.value)" name="alarmtime" type="datetime-local">
-            </div>
+                <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local">
 
-            <!-- Button to set or clear alarm-->
+            <!-- Buttons to set and clear alarm-->
 
-            <div id="controls">
+            
             <button onclick="setAlarm()" class="button set-alarm">Set alarm</button>
             <button onclick="clearAlarm()" class="button clear-alarm">Clear alarm</button>
-            </div>
+            
         </div>
         </section>
         <script src="main.js"></script> 
