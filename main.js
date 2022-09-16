@@ -36,20 +36,21 @@ function setAlarmTime(value) {
     console.log(alarmTime);
 }
 
+/* Set the dang alarm */
 
-// function setAlarm() {
-//     console.log('my set alarm function is running');
-//     if (alarmTime) {
-//         const current = new Date();
-//         const timeToAlarm = new Date(alarmTime);
+function setAlarm() {
+    console.log('my set alarm function is running');
+    if (alarmTime) {
+        const current = new Date();
+        const timeToAlarm = new Date(alarmTime);
 
-//         if (timeToAlarm > current) {
-//             const timeout = timeToAlarm.getTime() - current.getTime();
-//             alarmTimeout = setTimeout(() => audio.play(), timout);
-//             alert('Alarm set');
-//         }
-//     }
-// }
+        if (timeToAlarm > current) {
+            const timeout = timeToAlarm.getTime() - current.getTime();
+            alarmTimeout = setTimeout(() => timeout);
+            alert('Alarm set');
+        }
+    }
+}
 
 // function clearAlarm() {
 //     Audio.pause();
