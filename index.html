@@ -10,7 +10,7 @@
 
         <!-- Make container for Alarm -->
 
-        <section class="container">
+        <div class="container">
         <h1>Lindsay's Alarm Clock</h1>
 
             <!-- Display current time--> 
@@ -19,7 +19,9 @@
             <br>
             <!-- Place to input alarm time and keep on display-->
 
-                <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local">
+                <input onchange="setAlarm(this.value)" name="alarmTime" type="datetime-local">
+                <h2>Alarm time: </h2>
+                <div id="alarm-time"></div>
 
             <!-- Buttons to set and clear alarm-->
 
@@ -28,7 +30,7 @@
             <button onclick="clearAlarm()" class="button clear-alarm">Clear alarm</button>
             
         </div>
-        </section>
+    </div>
         <script src="main.js"></script> 
     </body>
 </html>
